@@ -1,11 +1,12 @@
 services:
   frontend:
     container_name: angularfrontend
-    image: borheneddinebenattia/foyer-frontend:latest
-    build:
-      context: ./AngularFrontend
-      dockerfile: ./Dockerfile
+    image: borheneddinebenattia/foyerdevopsfront:latest
   
+  backend:
+    container_name: springbackend
+    image: borheneddinebenattia/foyerdevopsbackend:latest
+    
   nginx:
     container_name: middlenginx
     image: nginx:stable-alpine
