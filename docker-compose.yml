@@ -1,11 +1,11 @@
 services:
-  #If you need replicas of the containers, copy and past. At this moment,
-  #DockerComposeV2's "replica" does not work as DockerComposeV1's
   frontend:
     container_name: angularfrontend
+    image: borheneddinebenattia/foyer-frontend:latest
     build:
       context: ./AngularFrontend
       dockerfile: ./Dockerfile
+  
   nginx:
     container_name: middlenginx
     image: nginx:stable-alpine
